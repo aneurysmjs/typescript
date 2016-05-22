@@ -23,5 +23,8 @@
   "dependencies": {
     "bootstrap": "3.3.6",
     "jquery": "2.2.4"
+  },
+  "devDependencies": {
+    "lite-server": "2.2.0"
   }
 }

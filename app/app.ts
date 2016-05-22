@@ -1,2 +1,2 @@
-let name: string = 'Jero';
+var name: string = 'Jero';
 
