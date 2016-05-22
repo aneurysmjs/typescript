@@ -1,4 +1,3 @@
-import get = Reflect.get;
 /**
  Destructuring
 
