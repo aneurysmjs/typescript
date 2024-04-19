@@ -1,30 +1,36 @@
 {
   "name": "typescript",
   "version": "0.0.0",
-  "description": "just basic understanding of how to implement Typescript",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Typescript playground",
+  "private": true,
+  "packageManager": "pnpm@9.0.4",
+  "repository": "git@github.com:aneurysmjs/typescript.git",
+  "author": "jero <aneurysmjs@outlook.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/blackendstudios/typescript.git"
+  "scripts": {
+    "build": "pnpm -r --filter='./packages/**' run build",
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=8192\" pnpm -r --parallel --filter='./packages/**' run dev"
   },
   "keywords": [
-    "typescript",
-    "javascript"
+    "typescript"
   ],
-  "author": "jero <jero@javascript.com.co> (http://javascript.com.co/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/blackendstudios/typescript/issues"
-  },
-  "homepage": "https://github.com/blackendstudios/typescript#readme",
-  "dependencies": {
-    "bootstrap": "3.3.6",
-    "jquery": "2.2.4"
-  },
   "devDependencies": {
-    "lite-server": "2.2.0"
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/node": "^20.12.7",
+    "eslint": "^9.0.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.14.3",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.9",
+    "vitest": "^1.5.0"
   }
 }
