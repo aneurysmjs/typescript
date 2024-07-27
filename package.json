@@ -31,7 +31,7 @@
     "rollup-plugin-esbuild": "^6.1.1",
     "tsx": "^4.15.2",
     "typescript": "^5.4.5",
-    "vite": "^5.2.13",
+    "vite": "^5.3.5",
     "vitest": "^2.0.4"
   }
 }
