@@ -1,0 +1,29 @@
+{
+  "name": "@ark/bundler-cli",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "dev-": "NODE_OPTIONS=\"--max-old-space-size=8192\" rollup -c --watch -m inline"
+  },
+  "bin": {
+    "bundler": "./bin/bundler-cli.mjs"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "*.d.ts",
+    "dist"
+  ],
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  }
+}
