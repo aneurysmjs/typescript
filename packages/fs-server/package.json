@@ -1,0 +1,38 @@
+{
+  "name": "@ark/fs-server",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "dev": "tsx ./src/main.ts",
+    "make": "bundler build"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "fs-server": "./bin/fs-server.mjs"
+  },
+  "files": [
+    "*.d.ts",
+    "dist"
+  ],
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "dependencies": {
+    "@ark/bundler-cli": "workspace:^",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/ws": "^8.5.14"
+  }
+}
