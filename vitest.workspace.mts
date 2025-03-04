@@ -20,10 +20,16 @@ function getFoldersSync(dirPath: string) {
   return folders;
 }
 
-export default defineWorkspace([
-  ...getFoldersSync(packages).map((packageName) => ({
+const testProjectConfigurations = getFoldersSync(packages).map((pkgName) => {
+  const app = path.resolve(packages, pkgName);
+
+  return {
     test: {
-      name: packageName,
+      root: app,
+      environment: 'jsdom',
+      name: pkgName,
     },
-  })),
-]);
+  };
+});
+
+export default defineWorkspace([...testProjectConfigurations]);
